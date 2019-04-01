@@ -1,4 +1,4 @@
-(defproject metosin/reitit-interceptors "0.3.1"
+(defproject metosin/reitit-interceptors "shadow-dom-fix-v3"
   :description "Reitit, common interceptors bundled"
   :url "https://github.com/metosin/reitit"
   :license {:name "Eclipse Public License"
