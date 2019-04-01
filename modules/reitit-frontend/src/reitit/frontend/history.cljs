@@ -59,6 +59,13 @@
           el
           (recur (.-parentNode el)))))))
 
+(defn- event-target [event]
+  ;; Read event's target from composed path to get shadow dom working,
+  ;; fallback to target property if not available
+  (if-let [composed-path (.-composedPath event)]
+    (first (composed-path))
+    (.-target event)))
+
 (defrecord Html5History [on-navigate router listen-key click-listen-key]
   History
   (-init [this]
@@ -76,7 +83,7 @@
           (fn ignore-anchor-click
             [e]
             ;; Returns the next matching anchestor of event target
-            (when-let [el (closest-by-tag (.-target e) "a")]
+            (when-let [el (closest-by-tag (event-target e) "a")]
               (let [uri (.parse Uri (.-href el))]
                 (when (and (or (and (not (.hasScheme uri)) (not (.hasDomain uri)))
                                (= current-domain (.getDomain uri)))
