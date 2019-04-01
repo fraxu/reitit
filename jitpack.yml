@@ -1,0 +1,2 @@
+install:
+   - ./scripts/lein-modules do clean, install
