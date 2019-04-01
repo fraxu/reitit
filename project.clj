@@ -1,4 +1,4 @@
-(defproject metosin/reitit-parent "0.3.2"
+(defproject reitit/reitit-parent "0.3.3"
   :description "Snappy data-driven router for Clojure(Script)"
   :url "https://github.com/metosin/reitit"
   :license {:name "Eclipse Public License"
@@ -12,20 +12,20 @@
         :url "https://github.com/metosin/reitit"}
   ;; TODO: need to verify that the code actually workd with Java1.8, see #242
   :javac-options ["-Xlint:unchecked" "-target" "1.8" "-source" "1.8"]
-  :managed-dependencies [[metosin/reitit "0.3.2"]
-                         [metosin/reitit-core "0.3.2"]
-                         [metosin/reitit-dev "0.3.2"]
-                         [metosin/reitit-spec "0.3.2"]
-                         [metosin/reitit-schema "0.3.2"]
-                         [metosin/reitit-ring "0.3.2"]
-                         [metosin/reitit-middleware "0.3.2"]
-                         [metosin/reitit-http "0.3.2"]
-                         [metosin/reitit-interceptors "0.3.2"]
-                         [metosin/reitit-swagger "0.3.2"]
-                         [metosin/reitit-swagger-ui "0.3.2"]
-                         [metosin/reitit-frontend "0.3.2"]
-                         [metosin/reitit-sieppari "0.3.2"]
-                         [metosin/reitit-pedestal "0.3.2"]
+  :managed-dependencies [[reitit/reitit "0.3.3"]
+                         [reitit/reitit-core "0.3.3"]
+                         [reitit/reitit-dev "0.3.3"]
+                         [reitit/reitit-spec "0.3.3"]
+                         [reitit/reitit-schema "0.3.3"]
+                         [reitit/reitit-ring "0.3.3"]
+                         [reitit/reitit-middleware "0.3.3"]
+                         [reitit/reitit-http "0.3.3"]
+                         [reitit/reitit-interceptors "0.3.3"]
+                         [reitit/reitit-swagger "0.3.3"]
+                         [reitit/reitit-swagger-ui "0.3.3"]
+                         [reitit/reitit-frontend "0.3.3"]
+                         [reitit/reitit-sieppari "0.3.3"]
+                         [reitit/reitit-pedestal "0.3.3"]
                          [metosin/ring-swagger-ui "2.2.10"]
                          [metosin/spec-tools "0.9.0"]
                          [metosin/schema-tools "0.11.0"]
@@ -112,7 +112,7 @@
                                          "-Dclojure.compiler.direct-linking=true"]
                     :test-paths ["perf-test/clj"]
                     :dependencies [[compojure "1.6.1"]
-                                   [ring/ring-defaults "0.3.2"]
+                                   [ring/ring-defaults "0.3.3"]
                                    [ikitommi/immutant-web "3.0.0-alpha1"]
                                    [io.pedestal/pedestal.service "0.5.5"]
                                    [io.pedestal/pedestal.jetty "0.5.5"]
@@ -123,7 +123,7 @@
                                    [metosin/sieppari]
                                    [yada "1.2.16"]
                                    [aleph "0.4.6"]
-                                   [ring/ring-defaults "0.3.2"]
+                                   [ring/ring-defaults "0.3.3"]
                                    [ataraxy "0.4.2"]
                                    [bidi "2.1.5"]]}
              :analyze {:jvm-opts ^:replace ["-server"

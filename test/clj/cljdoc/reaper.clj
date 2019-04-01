@@ -18,15 +18,15 @@
                       ) [])
                   ;; third sweep to flatten chids...
                   (mapv (fn [[n o c]] (if c (into [n o] c) [n o]))))
-        data {:cljdoc/include-namespaces-from-dependencies ['metosin/reitit
-                                                            'metosin/reitit-core
-                                                            'metosin/reitit-ring
-                                                            'metosin/reitit-spec
-                                                            'metosin/reitit-schema
-                                                            'metosin/reitit-swagger
-                                                            'metosin/reitit-swagger-ui
-                                                            'metosin/reitit-frontend
-                                                            'metosin/reitit-middleware]
+        data {:cljdoc/include-namespaces-from-dependencies ['reitit/reitit
+                                                            'reitit/reitit-core
+                                                            'reitit/reitit-ring
+                                                            'reitit/reitit-spec
+                                                            'reitit/reitit-schema
+                                                            'reitit/reitit-swagger
+                                                            'reitit/reitit-swagger-ui
+                                                            'reitit/reitit-frontend
+                                                            'reitit/reitit-middleware]
               :cljdoc.doc/tree docs}]
     (spit "doc/cljdoc.edn" (with-out-str (pprint/pprint data)))))
 
