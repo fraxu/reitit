@@ -63,7 +63,7 @@
   ;; Read event's target from composed path to get shadow dom working,
   ;; fallback to target property if not available
   (if (exists? (.-composedPath (.-event_ event)))
-    (first (.-composedPath (.-event_ composed-path)))
+    (first (.-composedPath (.-event_ event)))
     (.-target event)))
 
 (defrecord Html5History [on-navigate router listen-key click-listen-key]
