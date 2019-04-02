@@ -1,4 +1,4 @@
-(defproject reitit/reitit-frontend "0.3.6"
+(defproject reitit/reitit-frontend "0.3.8"
   :description "Reitit: Clojurescript frontend routing core"
   :url "https://github.com/metosin/reitit"
   :license {:name "Eclipse Public License"
