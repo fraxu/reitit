@@ -62,7 +62,7 @@
 (defn- event-target [event]
   ;; Read event's target from composed path to get shadow dom working,
   ;; fallback to target property if not available
-  (if-let [composed-path (.-composedPath event)]
+  (if-let [composed-path (.-_event (.-composedPath event))]
     (first (composed-path))
     (.-target event)))
 
